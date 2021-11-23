@@ -8,6 +8,8 @@ import { DataLoader } from './dataLoader';
 // import renderer styles, see: https://github.com/css-modules/css-modules
 import './styles/data-glider.css';
 
+const htl = require('htl');
+
 /**
  * Notebook cell output renderer info.
  */
