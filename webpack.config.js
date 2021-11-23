@@ -40,14 +40,12 @@ const makeConfig = (argv, { entry, out, target, library = 'commonjs' }) => ({
 				test: /\.css$/,
 				use: [
 					'style-loader',
-					{
-						loader: 'css-loader',
-						options: {
-							importLoaders: 1,
-							modules: true,
-						},
-					},
+					'css-loader'
 				],
+			},
+			{
+				test: /\.svg$/,
+				loader: 'svg-inline-loader',
 			},
 		],
 	},

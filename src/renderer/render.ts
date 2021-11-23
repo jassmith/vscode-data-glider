@@ -6,7 +6,7 @@ import type {
 import { DataLoader } from './dataLoader';
 
 // import renderer styles, see: https://github.com/css-modules/css-modules
-import './style.css';
+import './styles/data-glider.css';
 
 /**
  * Notebook cell output renderer info.

@@ -16,19 +16,14 @@ __webpack_public_path__ = new URL(scriptUrl.replace(/[^/]+$/, '') +
 export const activate: ActivationFunction = (context: RendererContext<unknown>) => {
   return {
     renderOutputItem(outputItem: OutputItem, cellOutputElement: HTMLElement) {
-      let shadowRoot = cellOutputElement.shadowRoot;
-      if (!shadowRoot) {
-        shadowRoot = cellOutputElement.attachShadow({ mode: 'open' });
-        const outputRootElement: HTMLDivElement = document.createElement('div');
-        outputRootElement.id = 'root';
-        shadowRoot.append(outputRootElement);
-      }
-      const outputRootElement = shadowRoot.querySelector<HTMLElement>('#root')!;
-      errorOverlay.wrap(outputRootElement, () => {
-        outputRootElement.innerHTML = '';
+      errorOverlay.wrap(cellOutputElement, () => {
+        // clear prior cell output
+        cellOutputElement.innerHTML = '';
+
+        // create data glider view container
         const outputContainerElement: HTMLDivElement = document.createElement('div');
         outputContainerElement.className = 'data-glider';
-        outputRootElement.appendChild(outputContainerElement);
+        cellOutputElement.appendChild(outputContainerElement);
         render({
           container: outputContainerElement,
           outputItem: outputItem,
