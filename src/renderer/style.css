@@ -1,5 +1,23 @@
-.json code {
-  font-family: monospace;
-  font-size: 12px;
-  color: lightblue;
+.data-glider {
+  max-width: 100%;
+  background-color: var(--vscode-editor-background);
+  border: 1px solid var(--vscode-panel-border);
+}
+
+.text-output {
+  background-color: var(--vscode-editor-background);
+  border-width: 0px;
+  font-family: var(--vscode-editor-font-family);
+  font-size: var(--vscode-editor-font-size);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  max-height: 360px;
+  overflow: auto;
+  tab-size: 2;
+  white-space: pre-wrap;
+  padding: 10px;
+}
+
+.text-output code {
+  color: var(--vscode-editor-foreground) !important;
 }

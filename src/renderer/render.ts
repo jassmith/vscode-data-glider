@@ -3,8 +3,10 @@ import type {
   OutputItem
 } from 'vscode-notebook-renderer';
 
+import { DataLoader } from './dataLoader';
+
 // import renderer styles, see: https://github.com/css-modules/css-modules
-import * as style from './style.css';
+import './style.css';
 
 /**
  * Notebook cell output renderer info.
@@ -20,13 +22,27 @@ interface IRenderInfo {
  * Renders notebook cell output.
  * @param param0 
  */
-export function render(renderInfo: IRenderInfo) {
+export function render(output: IRenderInfo) {
+  console.log(`data.glider:mimeType: ${output.mimeType}`);
+
+  // load and parse output data
+  const dataLoader: DataLoader = new DataLoader(output.outputItem, output.mimeType);
+  let data: any = dataLoader.getData();
+
+  // create text output display for now
   const pre = document.createElement('pre');
-  pre.classList.add(style.json);
+  pre.className = 'text-output';
   const code = document.createElement('code');
-  code.textContent = `mime type: ${renderInfo.mimeType}\n\n${JSON.stringify(renderInfo.outputItem.json(), null, 2)}`;
+  if (typeof data !== 'string') {
+    // stringify json data
+    code.textContent = JSON.stringify(data, null, 2);
+  }
+  else {
+    // show cell output text
+    code.textContent = output.outputItem.text();
+  }
   pre.appendChild(code);
-  renderInfo.container.appendChild(pre);
+  output.container.appendChild(pre);
 }
 
 if (module.hot) {

@@ -27,6 +27,7 @@ export const activate: ActivationFunction = (context: RendererContext<unknown>) 
       errorOverlay.wrap(outputRootElement, () => {
         outputRootElement.innerHTML = '';
         const outputContainerElement: HTMLDivElement = document.createElement('div');
+        outputContainerElement.className = 'data-glider';
         outputRootElement.appendChild(outputContainerElement);
         render({
           container: outputContainerElement,

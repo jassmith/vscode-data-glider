@@ -1,9 +1,9 @@
 import { ExtensionContext } from 'vscode';
 
 export function activate(context: ExtensionContext) {
-  console.log(`glide.data.grid: activated`);
+  // console.log(`data.glider: activated`);
 }
 
 export function deactivate() {
-  console.log(`glid.data.grid: deactivated`);
+  // console.log(`data.glider: deactivated`);
 }

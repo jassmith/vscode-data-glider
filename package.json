@@ -4,6 +4,7 @@
   "description": "Glide Data Grid Renderer for VScode Notebooks",
   "version": "1.0.0",
   "engines": {
+    "node": ">14.16.0",
     "vscode": "^1.62.0"
   },
   "icon": "resources/icons/data-glider.png",
@@ -33,11 +34,12 @@
     "Visualization"
   ],
   "keywords": [
+    "data grid",
     "notebookRenderer",
     "JSON",
     "CSV",
     "flat data",
-    "text",
+    "text data",
     "view",
     "notebook",
     "cell",
@@ -54,7 +56,8 @@
         "entrypoint": "./out/renderer/index.js",
         "displayName": "Glide Data Grid",
         "mimeTypes": [
-          "x-application/custom-json-output"
+          "application/json",
+          "text/csv"
         ]
       }
     ]
@@ -68,6 +71,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
+    "@types/d3-dsv": "^3.0.0",
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.0.0",
     "@types/node": "14.x",
@@ -88,5 +92,8 @@
     "@vscode/test-electron": "^1.6.2",
     "webpack": "^5.64.2",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "d3-dsv": "^3.0.1"
   }
 }
