@@ -2,7 +2,7 @@
 .vscode-test/**
 out/test/**
 src/**
-example/**
+notebooks/**
 
 .gitignore
 **/tsconfig.json
