@@ -1,5 +1,5 @@
 {
-  "name": "glide-data-grid-renderer",
+  "name": "vscode-data-glider",
   "displayName": "Glide Data Grid Renderer",
   "description": "Glide Data Grid Renderer for VScode Notebooks",
   "version": "1.0.0",
@@ -17,10 +17,10 @@
   "readme": "README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RandomFractals/glide-data-grid-renderer"
+    "url": "https://github.com/RandomFractals/vscode-data-glider"
   },
-  "bugs": "https://github.com/RandomFractals/glide-data-grid-renderer/issues",
-  "homepage": "https://github.com/RandomFractals/glide-data-grid-renderer/README.md",
+  "bugs": "https://github.com/RandomFractals/vscode-data-glider/issues",
+  "homepage": "https://github.com/RandomFractals/vscode-data-glider/README.md",
   "galleryBanner": {
     "color": "#333",
     "theme": "dark"
@@ -34,6 +34,7 @@
     "Visualization"
   ],
   "keywords": [
+    "glide",
     "data grid",
     "notebookRenderer",
     "JSON",
@@ -52,9 +53,9 @@
   "contributes": {
     "notebookRenderer": [
       {
-        "id": "glide-data-grid-renderer",
+        "id": "data-glider",
         "entrypoint": "./out/renderer/index.js",
-        "displayName": "Glide Data Grid",
+        "displayName": "Data Glider",
         "mimeTypes": [
           "application/json",
           "text/csv"

@@ -1,2 +1,3 @@
-# glide-data-grid-renderer
-Glide data grid renderer for VSCode notebooks.
+# vscode-data-glider
+
+[Glide Data Grid](https://github.com/glideapps/glide-data-grid) renderer for VSCode notebooks.
