@@ -16,8 +16,8 @@ See [Data Preview](https://github.com/RandomFractals/vscode-data-preview) 🈸 v
 
 Data Glider 中 Notebook 📓 cell ⌗ output Renderer uses [Glide Data Grid](https://github.com/glideapps/glide-data-grid) component for fast incremental data display and scrolling of datasets loaded in [VSCode Notebooks](https://code.visualstudio.com/api/extension-guides/notebook) 📚
 
-![Data Table 🈸 Renderer View](https://github.com/RandomFractals/vscode-data-table/blob/main/docs/images/data-table-renderer.png?raw=true 
- "Data Table 🈸 Renderer View")
+![Data Glider 中 Renderer](https://github.com/RandomFractals/vscode-data-glider/blob/main/docs/images/data-glider-renderer.png?raw=true 
+ "Data Glider 中 Renderer")
 
 ## 中 Features
 
