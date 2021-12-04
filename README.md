@@ -21,7 +21,7 @@ Data Glider 中 Notebook 📓 cell ⌗ output Renderer uses [Glide Data Grid](ht
 
 ## 中 Features
 
-- View `CSV` and `JSON` **array** data Notebook 📓 cell ⌗ output in HTML table with column sort, number and date formatting
+- View `CSV` and `JSON` **array** data Notebook 📓 cell ⌗ output in [HTML5 Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API) based data grid with fast scrolling
 ...
 
 # Dev Log
