@@ -7,6 +7,7 @@ import { DataLoader } from './dataLoader';
 
 // import renderer styles, see: https://github.com/css-modules/css-modules
 import './styles/data-glider.css';
+import * as ReactDOM from "react-dom";
 
 const htl = require('htl');
 
@@ -31,20 +32,8 @@ export function render(output: IRenderInfo) {
   const dataLoader: DataLoader = new DataLoader(output.outputItem, output.mimeType);
   let data: any = dataLoader.getData();
 
-  // create text output display for now
-  const pre = document.createElement('pre');
-  pre.className = 'text-output';
-  const code = document.createElement('code');
-  if (typeof data !== 'string') {
-    // stringify json data
-    code.textContent = JSON.stringify(data, null, 2);
-  }
-  else {
-    // show cell output text
-    code.textContent = output.outputItem.text();
-  }
-  pre.appendChild(code);
-  output.container.appendChild(pre);
+
+  ReactDOM.render(<h1>Test</h1>, output.container);
 }
 
 if (module.hot) {
